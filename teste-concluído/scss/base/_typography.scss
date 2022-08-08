@@ -1,0 +1,31 @@
+@use '../abstracts/variables' as *;
+
+body {
+    font-family: $ff-body;
+    font-size: $fs-body;
+    font-weight: $fw-regular;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: $fs-primary-heading;
+    font-weight: $fw-semibold;
+}
+
+h2 {
+    font-size: $fs-secondary-heading;
+    font-weight: $fw-medium;
+}
+
+h3 {
+    font-size: var(--fs-600);
+    font-weight: $fw-semibold;
+}
+
+h4 {
+    font-size: var(--fs-500);
+    font-weight: $fw-semibold;
+}

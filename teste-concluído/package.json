@@ -1,0 +1,16 @@
+{
+  "name": "teste-full-stack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch-css": "sass --watch scss/style.scss:css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cleave.js": "^1.6.0",
+    "sass": "^1.54.0"
+  }
+}

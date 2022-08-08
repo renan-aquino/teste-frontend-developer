@@ -1,0 +1,132 @@
+@use '../abstracts/' as *;
+
+.formulario {
+    max-width: 40%;
+    text-align: center;
+    color: $clr-primary-100;
+    border-radius: 10px;
+    background-color: $clr-neutral-100;
+    box-shadow: 0 1em 1em -1em rgb(39, 35, 12);
+    padding: 30px 30px 56px 30px;
+    z-index: 2;
+
+    h2{
+        display: none;
+    }
+
+    h3 {
+        color: $clr-accent-100;
+        font-weight: $fw-bold;
+    }
+}
+
+.close-form {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    button {
+        margin-left: auto;
+        margin-top: 20px;
+    }
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    font-size: 14px;
+    font-weight: $fw-medium;
+}
+
+input, textarea{
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(211, 211, 211);
+    font-size: 13px;
+
+    &::placeholder {
+        color: black;
+        opacity: 0.4;
+    }
+
+    &:focus::placeholder {
+        opacity: 0.6;
+    }
+
+    &:focus,
+    &:hover {
+        background-color: rgb(236, 236, 236);
+        outline: 0.1px solid rgb(185, 185, 185);
+    }
+
+}
+
+small {
+    visibility: hidden;
+    font-size: 13px;
+    color: red;
+}
+
+.input-group.error input {
+    border-color: red;
+    
+}
+
+.input-group.error small {
+    visibility: visible;
+}
+
+.input-group.success input {
+    border-color: green;
+}
+
+
+/* Formulário mobile */
+
+@media (max-width: 1024px) {
+    .formulario {
+        max-width: 100%;
+        width: calc(100% - 48px);
+        
+        h2 {
+            display: block;
+            color: $clr-accent-100;
+            font-weight: $fw-semibold;
+            padding-bottom: 24px;
+        }
+    }
+    
+
+    .close-form {
+        display: flex;
+        margin-left: auto;
+        width: 24px;
+        padding-bottom: 6px;
+    }
+
+    form {
+        align-items: center;
+    }
+
+    .input-group {
+        width: min(100%, 450px);
+    }
+
+}
+
+main[data-overlay]::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.637);
+}

@@ -1,0 +1,8 @@
+@mixin bg-img($bg-img) {
+    background-color: rgb(87, 87, 73);
+    background-image: url('../images/'+$bg-img);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-position: top center;
+}

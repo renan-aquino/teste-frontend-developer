@@ -1,0 +1,25 @@
+@use '../abstracts/' as *;
+
+.about img {
+    box-shadow: 0 1em 1em -1em rgb(39, 35, 12);
+}
+
+@media (max-width: 768px){
+    .about img {
+        max-width: min(90%, 332px);
+        margin-inline: auto;
+        border-radius: 10px;
+        margin-top: 40px;
+    }    
+}
+
+@media (min-width: 768px) {
+    .about img {
+        max-width: 50%;
+        border-radius: 10px;
+    }
+}
+
+.social-icon {
+    aspect-ratio: 1;
+}

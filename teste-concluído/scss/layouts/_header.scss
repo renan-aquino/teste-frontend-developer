@@ -1,0 +1,117 @@
+@use '../abstracts' as *;
+
+header {
+    height: 80px;
+    padding-inline: 24px;
+    background-color: $clr-primary-100;
+    min-width: 272px;
+    a {
+        max-width: 200px;
+    }
+
+    &[data-overlay]::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 3;
+        background-color: rgba(0, 0, 0, 0.637);
+        
+    }
+}
+
+.flex-center-between {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+ .nav-list {
+    display: flex;
+    gap: clamp(2rem, 3.5vw, 43px);
+ }
+
+ .nav-list-item {
+    font-size: $fs-nav;
+    font-weight: $fw-light;
+
+    a {
+        color: $clr-neutral-100;
+        
+        &:hover,
+        &:focus-visible {
+            color: $clr-accent-100;
+        }
+     }
+}
+
+@media (max-width: 1024px){
+    header button {
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        background-color: $clr-neutral-200;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        z-index: 3;
+        text-align: start;
+        padding-top: 80px;
+        gap: 40px;
+        transition: width 0.5s;
+
+        a{
+            color: $clr-primary-100;
+            font-weight: $fw-bold;
+            font-size: var(--fs-600);
+        }
+
+        .nav-list-item {
+            padding-inline: 30px;
+        }
+
+    }
+    } 
+
+    .menu {
+        #open {
+            display: block;
+        }
+        z-index: 4;
+        #close {
+            display: none;
+        }
+    }
+
+    .menu-close {
+        position: fixed;
+        right: 24px;
+        display: flex;
+        justify-content: center;
+        #close {
+            display: block;
+            width: 80%;
+        }
+        #open {
+            display: none;
+        }
+    }
+
+    .display-nav {
+        width: 70%;
+
+}
+
+@media (min-width: 768px){
+    .menu {
+        display: none;
+    }
+}
