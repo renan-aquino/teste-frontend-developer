@@ -19,12 +19,13 @@ O projeto foi realizado utilizando as seguintes tecnologias:
 
 -   HTML5;
 -   CSS;
--	  Sass;
+-	 Sass;
 -   JavaScript;
--	  Cleave.js;
+-	 Cleave.js;
 -   PHP (Para Full-Stack);
 -   MySQL (Para Full-Stack);
--	  Firebase Hosting.
+-	 Firebase Hosting.
+
 
 
 **Observções adicionais**: Os estilos foram feitos e organizados de maneira segregada com Sass, e estão armazenadas no diretório 'scss'.
